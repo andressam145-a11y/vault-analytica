@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault-Analytica | Institutional Quant Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="vault">VAULT</span><span class="analytica">ANALYTICA</span>
+            </div>
+            <div class="status-indicator">
+                <span class="pulse"></span> SISTEMA ESTRICTO ACTIVO
+            </div>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <h1>Análisis Forense y Cuantitativo</h1>
+                <p class="subtitle">Ingrese el ticker del activo para validación de Grado Institucional.</p>
+                <div class="input-group">
+                    <input type="text" id="tickerInput" placeholder="EJ: NVDA, TSLA, SPY..." autocomplete="off">
+                    <button id="analyzeBtn">EJECUTAR AUDITORÍA</button>
+                </div>
+                <div class="recent-news">
+                    <label for="newsInput">Contexto de Noticias / Reporte SEC (Opcional):</label>
+                    <textarea id="newsInput" placeholder="Pegue aquí el texto legal o noticia para análisis forense de riesgo..."></textarea>
+                </div>
+            </section>
+
+            <section id="resultsSection" class="results-grid hidden">
+                <!-- PANEL DE SEÑAL -->
+                <div class="card signal-card">
+                    <h3>Veredicto del Sistema</h3>
+                    <div id="statusBadge" class="badge">REVISANDO...</div>
+                    <div class="kelly-box">
+                        <span class="label">Kelly Allocation:</span>
+                        <span id="kellyVal" class="value">0.0%</span>
+                    </div>
+                </div>
+
+                <!-- PANEL CUANTITATIVO -->
+                <div class="card stats-card">
+                    <h3>Métricas Cuantitativas</h3>
+                    <div class="stat-row">
+                        <span>Desviación Sigma (2σ):</span>
+                        <span id="sigmaVal" class="stat-val">0.0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Volumen Relativo (RVOL):</span>
+                        <span id="rvolVal" class="stat-val">0.0</span>
+                    </div>
+                    <div class="progress-container">
+                        <div id="sigmaProgress" class="progress-bar"></div>
+                    </div>
+                    <div id="quantMsg" class="small-msg"></div>
+                </div>
+
+                <!-- PANEL FORENSE -->
+                <div class="card forensic-card">
+                    <h3>Integridad Forense</h3>
+                    <div id="forensicStatus" class="forensic-indicator">LIMPIO</div>
+                    <div id="forensicFindings" class="findings-list">
+                        <!-- Se llena con JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Vault-Analytica | Conectado a Core API v1.0.0 | Datos de Grado Forense</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
