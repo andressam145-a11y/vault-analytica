@@ -41,6 +41,7 @@ class RiskReport(BaseModel) :
 
 @app.post("/api/evaluate_asset", response_model=RiskReport)
 @app.post("/evaluate_asset", response_model=RiskReport)
+@app.post("/", response_model=RiskReport)
 def evaluate_asset(req: EvaluationRequest):
     ticker = req.ticker.upper()
     

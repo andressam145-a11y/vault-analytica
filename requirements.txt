@@ -1,0 +1,28 @@
+# Vault-Analytica - Institucional Core Quant Stack
+
+# --- 1. Lógica Quant y Arrays ---
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+statsmodels>=0.14.0 # (Cointegration, OLS)
+
+# --- 2. IA, NLP y Sentimiento ---
+langchain>=0.0.300
+transformers>=4.30.0 # (HuggingFace para FinBERT)
+torch>=2.0.0 # (Backend neuronal para BERT)
+openai>=1.0.0 # (En caso de requerir acceso a GPT-4 para auditoría densa)
+bs4>=0.0.1 # BeautifulSoup4 (Scraping de noticias)
+sec-edgar-downloader>=3.0.0 # Extracción de SEC (8-K, 10-Q)
+
+# --- 3. Series de Tiempo y Base de Datos ---
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.9 # Conector para PostgreSQL (y TimescaleDB)
+
+# --- 4. API Core ---
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+
+# --- 5. Data Feeds (Opcional, puede modificarse a Bloomberg/OANDA institucional) ---
+yfinance>=0.2.20
+alpaca-trade-api>=3.0.2
