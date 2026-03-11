@@ -39,7 +39,7 @@ class RiskReport(BaseModel) :
     kelly_allocation_percentage: float
     message: str
 
-@app.post("/evaluate_asset", response_model=RiskReport)
+@app.post("/api/evaluate_asset", response_model=RiskReport)
 def evaluate_asset(req: EvaluationRequest):
     ticker = req.ticker.upper()
     
