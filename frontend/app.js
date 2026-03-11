@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000';
+const API_URL = '/api';
 
 document.getElementById('analyzeBtn').addEventListener('click', async () => {
     const ticker = document.getElementById('tickerInput').value.trim();
